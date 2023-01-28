@@ -5,15 +5,19 @@
   "main": "index.html",
   "scripts": {
     "dev": "parcel ./index.html ",
-    "build": "parcel build ./index.html"
+    "build": "parcel build ./index.html",
+    "predeploy": "npm run build",  
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "scss": "^0.2.4",
     "scss-loader": "^0.0.1"
-  }
+  },
+  "homepage": "https://github.com/ssoonnyy/Portfolio2023"
 }
