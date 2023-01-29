@@ -125,111 +125,111 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.language = exports.frontEnd = exports.etc = exports.all = void 0;
 var all = [{
-  name: "HTML5",
-  src: "/html.90ebf38d.png",
-  info01: "웹 사이트의 구조를 구성 및 개발 가능",
-  info02: "시멘틱 마크업을 적재적소에 사용 가능"
+  name: 'HTML5',
+  src: '/html.90ebf38d.png',
+  info01: '웹 사이트의 구조를 구성 및 개발 가능',
+  info02: '시멘틱 마크업을 적재적소에 사용 가능'
 }, {
-  name: "CSS3",
-  src: "./js/images/skill2.png",
-  info01: "HTML과 연동하여 레이아웃 디자인 구현 가능",
-  info02: "웹페이지의 다양한 구성을 이해하여 디자인에 맡게 제작하거나 수정할 수 있음"
+  name: 'CSS3',
+  src: './css.cb711826.png',
+  info01: 'HTML과 연동하여 레이아웃 디자인 구현 가능',
+  info02: '웹페이지의 다양한 구성을 이해하여 디자인에 맡게 제작하거나 수정할 수 있음'
 }, {
-  name: "JavaScript",
-  src: "./js/images/skill3.png",
-  info01: "함수를 이용한해 화면 구현, JS를 이용한 DOM 조작 가능",
-  info02: "콘텐츠에 동적 기능 부여, 멀티미디어 제어, 애니메이션 추가 등 다양한 기능 활용하여 웹 사이트 제작 가능"
+  name: 'JavaScript',
+  src: './js.c156dff7.png',
+  info01: '함수를 이용한해 화면 구현, JS를 이용한 DOM 조작 가능',
+  info02: '콘텐츠에 동적 기능 부여, 멀티미디어 제어, 애니메이션 추가 등 다양한 기능 활용하여 웹 사이트 제작 가능'
 }, {
-  name: "jQuery",
-  src: "./js/images/skill4.png",
-  info01: "자바스크립트로 만들어진 함수를 호출, 사용해 기능 구현 가능",
-  info02: "라이브러리를 활용하여 다양한 이벤트 제어 가능"
+  name: 'jQuery',
+  src: './jQuery.de7f17e1.png',
+  info01: '자바스크립트로 만들어진 함수를 호출, 사용해 기능 구현 가능',
+  info02: '라이브러리를 활용하여 다양한 이벤트 제어 가능'
 }, {
-  name: "React",
-  src: "./js/images/skill5.png",
-  info01: "tyled 컴포넌트 적용 가능",
-  info02: "추가 예정입니다."
+  name: 'React',
+  src: './react.75ca2bae.png',
+  info01: 'tyled 컴포넌트 적용 가능',
+  info02: '추가 예정입니다.'
 }, {
-  name: "SASS",
-  src: "./js/images/skill6.png",
-  info01: "mixin과 include를 활용하여 작성가능",
-  info02: "추가 예정입니다."
+  name: 'SASS',
+  src: './sass.872609a9.png',
+  info01: 'mixin과 include를 활용하여 작성가능',
+  info02: '추가 예정입니다.'
 }, {
-  name: "Node.js",
-  src: "./js/images/skill7.png",
-  info01: "추가 예정입니다.",
-  info02: "추가 예정입니다."
+  name: 'Node.js',
+  src: './js/images/skill7.png',
+  info01: '추가 예정입니다.',
+  info02: '추가 예정입니다.'
 }, {
-  name: "Git",
-  src: "./js/images/skill8.png",
-  info01: "push , pull , commit 을 활용하여 형상관리 가능",
-  info02: "branch를 나누어 통합 작업 가능"
+  name: 'Git',
+  src: './js/images/skill8.png',
+  info01: 'push , pull , commit 을 활용하여 형상관리 가능',
+  info02: 'branch를 나누어 통합 작업 가능'
 }, {
-  name: "GitHub",
-  src: "./js/images/skill9.png",
-  info01: "git을 통한 형상관리와 이를 github에 연결하여 배포 가능",
-  info02: "추가 예정입니다."
+  name: 'GitHub',
+  src: './github.0512e05a.png',
+  info01: 'git을 통한 형상관리와 이를 github에 연결하여 배포 가능',
+  info02: '추가 예정입니다.'
 }, {
-  name: "AdobeXd",
-  src: "./js/images/skill10.png",
-  info01: "XD를 활용하여 시안 제작 가능",
-  info02: "추가 예정입니다."
+  name: 'AdobeXd',
+  src: './js/images/skill10.png',
+  info01: 'XD를 활용하여 시안 제작 가능',
+  info02: '추가 예정입니다.'
 }];
 exports.all = all;
 var language = [{
-  name: "HTML5",
-  src: "./js/images/skill1.png",
-  info01: "웹 사이트의 구조를 구성 및 개발 가능",
-  info02: "시멘틱 마크업을 적재적소에 사용 가능"
+  name: 'HTML5',
+  src: './js/images/skill1.png',
+  info01: '웹 사이트의 구조를 구성 및 개발 가능',
+  info02: '시멘틱 마크업을 적재적소에 사용 가능'
 }, {
-  name: "CSS3",
-  src: "./js/images/skill2.png",
-  info01: "HTML과 연동하여 레이아웃 디자인 구현 가능",
-  info02: "웹페이지의 다양한 구성을 이해하여 디자인에 맡게 제작하거나 수정할 수 있음"
+  name: 'CSS3',
+  src: './js/images/skill2.png',
+  info01: 'HTML과 연동하여 레이아웃 디자인 구현 가능',
+  info02: '웹페이지의 다양한 구성을 이해하여 디자인에 맡게 제작하거나 수정할 수 있음'
 }, {
-  name: "JavaScript",
-  src: "./js/images/skill3.png",
-  info01: "함수를 이용한해 화면 구현, JS를 이용한 DOM 조작 가능",
-  info02: "콘텐츠에 동적 기능 부여, 멀티미디어 제어, 애니메이션 추가 등 다양한 기능 활용하여 웹 사이트 제작 가능"
+  name: 'JavaScript',
+  src: './js/images/skill3.png',
+  info01: '함수를 이용한해 화면 구현, JS를 이용한 DOM 조작 가능',
+  info02: '콘텐츠에 동적 기능 부여, 멀티미디어 제어, 애니메이션 추가 등 다양한 기능 활용하여 웹 사이트 제작 가능'
 }, {
-  name: "jQuery",
-  src: "./js/images/skill4.png",
-  info01: "자바스크립트로 만들어진 함수를 호출, 사용해 기능 구현 가능",
-  info02: "라이브러리를 활용하여 다양한 이벤트 제어 가능"
+  name: 'jQuery',
+  src: './js/images/skill4.png',
+  info01: '자바스크립트로 만들어진 함수를 호출, 사용해 기능 구현 가능',
+  info02: '라이브러리를 활용하여 다양한 이벤트 제어 가능'
 }];
 exports.language = language;
 var frontEnd = [{
-  name: "React",
-  src: "./js/images/skill5.png",
-  info01: "tyled 컴포넌트 적용 가능",
-  info02: "추가 예정입니다."
+  name: 'React',
+  src: './js/images/skill5.png',
+  info01: 'tyled 컴포넌트 적용 가능',
+  info02: '추가 예정입니다.'
 }, {
-  name: "SASS",
-  src: "./js/images/skill6.png",
-  info01: "mixin과 include를 활용하여 작성가능",
-  info02: "추가 예정입니다."
+  name: 'SASS',
+  src: './js/images/skill6.png',
+  info01: 'mixin과 include를 활용하여 작성가능',
+  info02: '추가 예정입니다.'
 }];
 exports.frontEnd = frontEnd;
 var etc = [{
-  name: "Node.js",
-  src: "./js/images/skill7.png",
-  info01: "추가 예정입니다.",
-  info02: "추가 예정입니다."
+  name: 'Node.js',
+  src: './js/images/skill7.png',
+  info01: '추가 예정입니다.',
+  info02: '추가 예정입니다.'
 }, {
-  name: "Git",
-  src: "./js/images/skill8.png",
-  info01: "push , pull , commit 을 활용하여 형상관리 가능",
-  info02: "branch를 나누어 통합 작업 가능"
+  name: 'Git',
+  src: './js/images/skill8.png',
+  info01: 'push , pull , commit 을 활용하여 형상관리 가능',
+  info02: 'branch를 나누어 통합 작업 가능'
 }, {
-  name: "GitHub",
-  src: "./js/images/skill9.png",
-  info01: "git을 통한 형상관리와 이를 github에 연결하여 배포 가능",
-  info02: "추가 예정입니다."
+  name: 'GitHub',
+  src: './js/images/skill9.png',
+  info01: 'git을 통한 형상관리와 이를 github에 연결하여 배포 가능',
+  info02: '추가 예정입니다.'
 }, {
-  name: "AdobeXd",
-  src: "./js/images/skill10.png",
-  info01: "XD를 활용하여 시안 제작 가능",
-  info02: "추가 예정입니다."
+  name: 'AdobeXd',
+  src: './js/images/skill10.png',
+  info01: 'XD를 활용하여 시안 제작 가능',
+  info02: '추가 예정입니다.'
 }];
 exports.etc = etc;
 },{}],"js/main.js":[function(require,module,exports) {
@@ -1082,7 +1082,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60578" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52245" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
