@@ -26,14 +26,14 @@ const all = [
   {
     name:'React',
     src: './js/images/react.png',
-    info01: 'tyled 컴포넌트 적용 가능',
-    info02: '추가 예정입니다.'
+    info01: '리액트를 활용하여 간단한 SPA 사이트 제작 가능',
+    info02: 'Component와 Props, State와 생명주기, 이벤트 처리 사용 가능'
   },
   {
     name:'SASS',
     src: './js/images/sass.png',
     info01: 'mixin과 include를 활용하여 작성가능',
-    info02: '추가 예정입니다.'
+    info02: ' '
   },
   {
     name:'Node.js',
@@ -51,13 +51,13 @@ const all = [
     name:'GitHub',
     src: './js/images/github.png',
     info01: 'git을 통한 형상관리와 이를 github에 연결하여 배포 가능',
-    info02: '추가 예정입니다.'
+    info02: ' '
   },
   {
     name:'AdobeXd',
     src: './js/images/xd.png',
     info01: 'XD를 활용하여 시안 제작 가능',
-    info02: '추가 예정입니다.'
+    info02: ' '
   }
 ] 
 
@@ -94,14 +94,14 @@ const frontEnd = [
   {
     name:'React',
     src: './js/images/react.png',
-    info01: 'tyled 컴포넌트 적용 가능',
-    info02: '추가 예정입니다.'
+    info01: '리액트를 활용하여 간단한 SPA 사이트 제작 가능',
+    info02: 'Component와 Props, State와 생명주기, 이벤트 처리 사용 가능'
   },
   {
     name:'SASS',
     src: './js/images/sass.png',
     info01: 'mixin과 include를 활용하여 작성가능',
-    info02: '추가 예정입니다.'
+    info02: ' '
   }
 ]
 
@@ -122,13 +122,13 @@ const etc = [
     name:'GitHub',
     src: './js/images/github.png',
     info01: 'git을 통한 형상관리와 이를 github에 연결하여 배포 가능',
-    info02: '추가 예정입니다.'
+    info02: ' '
   },
   {
     name:'AdobeXd',
     src: './js/images/xd.png',
     info01: 'XD를 활용하여 시안 제작 가능',
-    info02: '추가 예정입니다.'
+    info02: ' '
   }
 ]
 
