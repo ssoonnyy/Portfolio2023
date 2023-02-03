@@ -89,6 +89,53 @@
   width: 100%;
   height: 100vh;
 }
+.main_bg .main .click_here {
+  text-align: center;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main_bg .main .click_here > li:nth-child(1) {
+  font-size: 20px;
+  -webkit-animation: clickhere 1s linear 0.2s infinite;
+          animation: clickhere 1s linear 0.2s infinite;
+  margin-bottom: 5px;
+}
+@-webkit-keyframes clickhere {
+  0% {
+    transform: translateY(5px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@keyframes clickhere {
+  0% {
+    transform: translateY(5px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
 .main_bg .main .main_contents {
   height: 100vh;
   overflow: hidden;
@@ -102,7 +149,7 @@
   transition: clip-path var(--duration) var(--timing-function);
   transition: clip-path var(--duration) var(--timing-function), -webkit-clip-path var(--duration) var(--timing-function);
 }
-.main_bg .main .main_contents .test {
+.main_bg .main .main_contents .main_contents_sonny {
   position: fixed;
   background-color: #fff;
   top: 50%;
@@ -221,7 +268,7 @@
   height: 180px;
   margin: 0 auto;
   margin-top: 45px;
-  background-color: #eeeeee;
+  background-color: rgba(238, 238, 238, 0.8);
   padding: 20px 0;
   box-sizing: border-box;
 }
@@ -580,7 +627,7 @@
   border-radius: 50px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px, rgba(0, 0, 0, 0.23) 0px 2px 2px;
-  transition: box-shadow 0.2s;
+  transition: all 0.2s;
   cursor: pointer;
 }
 .project .project_container .project01_box .project01 .page_nav > li:nth-child(1):active {
@@ -601,6 +648,13 @@
 }
 .project .project_container .project01_box .project01 .page_nav > li > a {
   display: block;
+}
+.project .project_container .project01_box .project01 .page_nav > li:hover {
+  background-color: rgba(0, 113, 227, 0.8);
+  color: #fff;
+}
+.project .project_container .project01_box .project01 .page_nav > li:hover > a {
+  color: #fff;
 }
 .project .project_container .project01_box .project01_info {
   width: 500px;
@@ -664,7 +718,7 @@
   left: 50%;
   width: 0;
   height: 0;
-  border: 8px solid transparent;
+  border: 10px solid transparent;
   border-bottom-color: #eee;
   border-top: 0;
   border-left: 0;
@@ -718,7 +772,7 @@
   border-radius: 50px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px, rgba(0, 0, 0, 0.23) 0px 2px 2px;
-  transition: box-shadow 0.2s;
+  transition: all 0.2s;
   cursor: pointer;
 }
 .project .project_container .project02_box .project02 .page_nav > li:nth-child(1):active {
@@ -739,6 +793,13 @@
 }
 .project .project_container .project02_box .project02 .page_nav > li > a {
   display: block;
+}
+.project .project_container .project02_box .project02 .page_nav > li:hover {
+  background-color: rgba(0, 113, 227, 0.8);
+  color: #fff;
+}
+.project .project_container .project02_box .project02 .page_nav > li:hover a {
+  color: #fff;
 }
 .project .project_container .project02_box .project02_info {
   width: 500px;
@@ -820,6 +881,58 @@
   width: 32px;
   height: 32px;
   margin-right: 10px;
+}
+.project .project_container .no_project03 .project01_info > #contribute {
+  margin-top: 10px;
+}
+.project .project_container .no_project03 .project01_info > #contribute > span {
+  display: inline-block;
+  padding: 3px 6px;
+  position: relative;
+  margin-right: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+  font-weight: bold;
+}
+.project .project_container .no_project03 .project01_info > #contribute > span > span {
+  border-radius: 10px;
+  background-color: rgba(0, 113, 227, 0.8);
+  display: block;
+  opacity: 0.4;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  transition: all 1.2s linear;
+}
+.project .project_container .no_project04 .project02_info > #contribute {
+  margin-top: 10px;
+}
+.project .project_container .no_project04 .project02_info > #contribute > span {
+  display: inline-block;
+  padding: 3px 6px;
+  position: relative;
+  margin-right: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+  font-weight: bold;
+}
+.project .project_container .no_project04 .project02_info > #contribute > span > span {
+  border-radius: 10px;
+  background-color: rgba(191, 31, 31, 0.5);
+  display: block;
+  opacity: 0.4;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  transition: all 1.2s linear;
 }
 .project .project_silde02 {
   margin: 0 340px;
@@ -1079,6 +1192,24 @@
 }
 .modal_bg .modal_container .modal_main .modal_explain hr {
   margin: 100px 0;
+}
+.modal_bg .modal_container .modal_main .modal_explain .project01_mobile_explain ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal_bg .modal_container .modal_main .modal_explain .project01_mobile_explain ul li {
+  margin: 0 10px;
+}
+.modal_bg .modal_container .modal_main .modal_explain .flexbox {
+  display: flex;
+  align-items: center;
+}
+.modal_bg .modal_container .modal_main .modal_explain .flexbox li {
+  width: 50%;
+}
+.modal_bg .modal_container .modal_main .modal_explain .flexbox li:nth-child(1) > video {
+  width: 100%;
 }
 .modal_bg .modal_container footer {
   padding: 10px 0;

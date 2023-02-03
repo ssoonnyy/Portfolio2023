@@ -1,3 +1,72 @@
+@mixin projectBox {
+  width: 100%; height: 374px;
+  margin: 40px 0 0 0;
+  position: relative;
+  overflow: hidden;
+}
+@mixin pageBtn {
+  width: 20%;
+  padding: 5px 10px; box-sizing: border-box;
+  text-align: center;
+  border: 1px solid rgba(0, 113, 227, 0.8); box-sizing: border-box;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px, rgba(0, 0, 0, 0.23) 0px 2px 2px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+@mixin contributeSpan01 {
+  display: inline-block;
+  padding: 3px 6px;
+  position: relative;
+  margin-right: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(black, .2);
+  font-size: 13px;
+  font-weight: bold;
+}
+@mixin contributeSpan02($bgc) {
+  border-radius: 10px;
+  background-color: $bgc;
+  display: block;
+  opacity: 0.4;
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%;
+  height: 0%;
+  transition: all 1.2s linear;
+}
+@mixin bubbleSpan {
+  display: inline-block;
+  padding: 3px 6px;
+  position: relative;
+  margin-right: 20px;
+  border-radius: 10px;
+  background-color: #eee;
+  transform: translate3d(0, 0, 0);
+  font-size: 10px;
+  font-weight: bold;
+  bottom: 3px;
+  opacity: 0;
+  scale: 0;
+  transition: all 0.5s;
+}
+@mixin bubbleSpanAfter {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom-color: #eee;
+  border-top: 0;
+  border-left: 0;
+  margin-left: -10px;
+  margin-top: -7px;
+}
+
 .menu_bg {
   width: 170px; height: 100vh;
   position: fixed;
@@ -66,6 +135,26 @@
     justify-content: center;
     align-items: center;
     width: 100%;  height: 100vh;
+    .click_here {
+      text-align: center;
+      position: absolute;
+      top: 52%; left: 50%;
+      transform: translateX(-50%);
+      >li{
+        &:nth-child(1){
+          font-size: 20px;
+          animation: clickhere 1s linear 0.2s infinite;
+          margin-bottom: 5px;
+          @keyframes clickhere {
+            0% {transform: translateY(5px); }  
+            25% {transform: translateY(0px); }  
+            50% {transform: translateY(5px); }  
+            75% {transform: translateY(0px); }  
+            100% {transform: translateY(5px); }  
+          }
+        }
+      }
+    }
     .main_contents {
       height: 100vh;
       overflow: hidden;
@@ -75,7 +164,7 @@
       margin-left: 15px;
       clip-path: var(--clip-path);
       transition: clip-path var(--duration) var(--timing-function);
-      .test {
+      .main_contents_sonny {
         position: fixed;
         background-color: #fff;
         top: 50%;
@@ -121,9 +210,6 @@
           content: attr(data-text);
           padding-left: 26px;
         }
-        // &::before {
-        //   color: var(--color);
-        // }
         &::after {
           color: var(--color-invert);
           clip-path: var(--clip-path);
@@ -198,7 +284,7 @@
     width: 820px; height: 180px;
     margin: 0 auto;
     margin-top: 45px;
-    background-color: rgba($color: #eee, $alpha: 1);
+    background-color: rgba($color: #eee, $alpha: 0.8);
     padding: 20px 0; box-sizing: border-box;
     >nav{
       display: flex;
@@ -321,25 +407,7 @@
 }
 
 /* page04 project */
-@mixin projectBox {
-  width: 100%; height: 374px;
-  margin: 40px 0 0 0;
-  position: relative;
-  overflow: hidden;
-}
 
-
-@mixin pageBtn {
-  width: 20%;
-  padding: 5px 10px; box-sizing: border-box;
-  text-align: center;
-  border: 1px solid rgba(0, 113, 227, 0.8); box-sizing: border-box;
-  border-radius: 50px;
-  overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px, rgba(0, 0, 0, 0.23) 0px 2px 2px;
-  transition: box-shadow 0.2s;
-  cursor: pointer;
-}
 
 .project {
   position: relative;
@@ -414,6 +482,11 @@
             &:nth-child(3):active{box-shadow: none; scale: 0.9;}
             &:nth-child(4):active{box-shadow: none; scale: 0.9;}
             >a{display: block;}
+            &:hover {
+              background-color:rgba(0, 113, 227, 0.8);
+              color: #fff;
+              &>a{color: #fff;}
+            }
           }
     
         }
@@ -429,57 +502,18 @@
         >#contribute {
           margin-top: 10px;
           >span {
-            display: inline-block;
-            padding: 3px 6px;
-            position: relative;
-            margin-right: 10px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 1px 3px rgba(black, .2);
-            font-size: 13px;
-            font-weight: bold;
+            @include contributeSpan01();
             >span {
-              border-radius: 10px;
-              background-color: rgba($color: #BF1F1F, $alpha: 0.5);
-              display: block;
-              opacity: 0.4;
-              position: absolute;
-              left: 0; bottom: 0;
-              width: 100%;
-              height: 0%;
-              transition: all 1.2s linear;
+              @include contributeSpan02($bgc:rgba($color: #BF1F1F, $alpha: 0.5));
             }
           }
         }
         .bubbles {
           padding-left: 20px;
           >span {
-            display: inline-block;
-            padding: 3px 6px;
-            position: relative;
-            margin-right: 20px;
-            border-radius: 10px;
-            background-color: #eee;
-            transform: translate3d(0, 0, 0);
-            font-size: 10px;
-            font-weight: bold;
-            bottom: 3px;
-            opacity: 0;
-            scale: 0;
-            transition: all 0.5s;
+           @include bubbleSpan();
             &::after{
-              content: '';
-              position: absolute;
-              top: 0;
-              left: 50%;
-              width: 0;
-              height: 0;
-              border: 8px solid transparent;
-              border-bottom-color: #eee;
-              border-top: 0;
-              border-left: 0;
-              margin-left: -10px;
-              margin-top: -7px;
+              @include bubbleSpanAfter();
             }
           }
         }
@@ -519,6 +553,11 @@
             &:nth-child(3):active{box-shadow: none; scale: 0.9;}
             &:nth-child(4):active{box-shadow: none; scale: 0.9;}
             >a{display: block;}
+            &:hover {
+              background-color:rgba(0, 113, 227, 0.8);
+              color: #fff;
+              & a{color: #fff;}
+            }
           }
         }
       }
@@ -533,57 +572,19 @@
         >#contribute {
           margin-top: 10px;
           >span {
-            display: inline-block;
-            padding: 3px 6px;
-            position: relative;
-            margin-right: 10px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 1px 3px rgba(black, .2);
-            font-size: 13px;
-            font-weight: bold;
+            @include contributeSpan01();
             >span{
-              border-radius: 10px;
-              background-color: rgba($color: #ff9500, $alpha: 0.5);
-              display: block;
-              opacity: 0.4;
-              position: absolute;
-              left: 0; bottom: 0;
-              width: 100%;
-              height: 0%;
-              transition: all 1.2s linear;
+              @include contributeSpan02($bgc:rgba($color: #ff9500, $alpha: 0.5));
             }
           }
         }
+ 
         .bubbles {
           padding-left: 20px;
           >span {
-            display: inline-block;
-            padding: 3px 6px;
-            position: relative;
-            margin-right: 20px;
-            border-radius: 10px;
-            background-color: #eee;
-            transform: translate3d(0, 0, 0);
-            font-size: 10px;
-            font-weight: bold;
-            bottom: 3px;
-            opacity: 0;
-            scale: 0;
-            transition: all 0.5s;
+           @include bubbleSpan();
             &::after{
-              content: '';
-              position: absolute;
-              top: 0;
-              left: 50%;
-              width: 0;
-              height: 0;
-              border: 10px solid transparent;
-              border-bottom-color: #eee;
-              border-top: 0;
-              border-left: 0;
-              margin-left: -10px;
-              margin-top: -7px;
+              @include bubbleSpanAfter();
             }
           }
         }
@@ -597,6 +598,32 @@
             >span{
               width: 32px; height: 32px;
               margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+    .no_project03{
+      .project01_info{
+        >#contribute {
+          margin-top: 10px;
+          >span {
+            @include contributeSpan01();
+            >span{
+              @include contributeSpan02($bgc:rgba(0, 113, 227, 0.8));
+            }
+          }
+        }
+      }
+    }
+    .no_project04{
+      .project02_info{
+        >#contribute {
+          margin-top: 10px;
+          >span {
+            @include contributeSpan01();
+            >span{
+              @include contributeSpan02($bgc:rgba($color: #BF1F1F, $alpha: 0.5));
             }
           }
         }
@@ -656,7 +683,6 @@
       }
     }
   }
-  
   >p {
     text-align: center;
     &.notify{
@@ -815,7 +841,28 @@
           }
         }
         hr{margin: 100px 0;}
+        .project01_mobile_explain{
+          ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {margin: 0 10px;}
+          }
+        }
+        .flexbox{
+          display: flex;
+          align-items: center;
+          li{
+            width: 50%;
+            &:nth-child(1){
+              >video {
+                width: 100%;
+              }
+            }
+          }
+        }
       }
+
     }
     footer{
       padding: 10px 0;

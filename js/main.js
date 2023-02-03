@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded",()=>{
     let modal_Ul = document.querySelectorAll('.modal_bg ul')
     let modalH3 = document.querySelectorAll('.modal_main h3')
     let contactLi = document.querySelectorAll('.contact li')
- 
+    let pageNav = document.querySelectorAll('.page_nav > li')
+
     if(!state){
       this.style.transform = 'translateX(76px)'
       this.style.backgroundColor ='#eee'
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded",()=>{
       document.querySelector('#page03').style.backgroundColor='#202b38'
       document.querySelector('#page04').style.backgroundColor='#202b38'
       document.querySelector('#page05').style.backgroundColor='#202b38'
-      document.querySelector('.test').style.backgroundColor='#202b38'
+      document.querySelector('.main_contents_sonny').style.backgroundColor='#202b38'
       document.querySelector('.my_info').style.backgroundColor='#5b5b5b'
       document.querySelector('.my_promise').style.backgroundColor='#5b5b5b'
       document.querySelector('#skill_root01').style.color='#fff'
@@ -94,10 +95,20 @@ document.addEventListener("DOMContentLoaded",()=>{
       for(let i=0; i<contactLi.length; i++){
         contactLi[i].style.color='black'
       }
+      for(let i=0; i<pageNav.length; i++){
+        pageNav[i].addEventListener('mouseenter',function(){
+          this.style.backgroundColor= '#fff'
+          this.children[0].style.color='black'
+        })
+        pageNav[i].addEventListener('mouseleave',function(){
+          this.style.backgroundColor= 'rgba(0, 113, 227, 0.8)'
+          this.children[0].style.color='#fff'
+        })
+      }
 
 
       document.querySelector('.btn_txt').classList.add('mode')  
-
+      
       state = true
     } else {
       this.style.transform = 'translateX(0px)'
@@ -111,7 +122,7 @@ document.addEventListener("DOMContentLoaded",()=>{
       document.querySelector('#page03').style.backgroundColor='#fff'
       document.querySelector('#page04').style.backgroundColor='#fff'
       document.querySelector('#page05').style.backgroundColor='#fff'
-      document.querySelector('.test').style.backgroundColor='#fff'
+      document.querySelector('.main_contents_sonny').style.backgroundColor='#fff'
       document.querySelector('.my_info').style.backgroundColor='#eee'
       document.querySelector('.my_promise').style.backgroundColor='#eee'
       document.querySelector('#skill_root01').style.color='black'
@@ -120,7 +131,8 @@ document.addEventListener("DOMContentLoaded",()=>{
       document.querySelector('#skill_root04').style.color='black'
       document.querySelector('.modal_main h3').style.color='black'
       document.querySelector('.notify').style.color='#334455'
-      
+    
+
       
       for(let i=0; i<aChange.length; i++){
         aChange[i].style.color='black'
@@ -166,6 +178,15 @@ document.addEventListener("DOMContentLoaded",()=>{
       for(let i=0; i<contactLi.length; i++){
         contactLi[i].style.color='black'
       }
+      for(let i=0; i<pageNav.length; i++){
+        pageNav[i].addEventListener('mouseenter',function(){
+          this.style.backgroundColor= 'rgba(0, 113, 227, 0.8)'
+        })
+        pageNav[i].addEventListener('mouseleave',function(){
+          this.style.backgroundColor= '#fff'
+          this.children[0].style.color='#fff'
+        })
+      }
 
       document.querySelector('.btn_txt').classList.remove('mode')
      
@@ -184,7 +205,6 @@ document.addEventListener("DOMContentLoaded",()=>{
       state = true
     }
   })
-
 })
 
 $(function(){
@@ -273,7 +293,7 @@ $(function(){
               },1000)
             }, 500)
           }, 500)
-      },1000)
+      },300)
     
      
     }else {
@@ -519,22 +539,14 @@ for(let i=0; i<etc.length; i++){
 
   rootEtc.appendChild(skillBox)
 }
-  
-
-
-document.addEventListener("DOMContentLoaded",()=>{
-
-})
-
 
 
 /* page04 event  */
 
-
   /* 버튼 슬라이드 */
   const slider = document.querySelector('.project_slider') // 움직일 주체
   const projectBox = document.querySelectorAll('.project_container') // 내용물
-  const btn = document.querySelector('.project_btnbox')
+  const projectBtn = document.querySelector('.project_btnbox')
 
 
   const containerWidth = projectBox[0].clientWidth + 340
@@ -543,8 +555,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   let currentIndex = 0
   let translate = 0
-
-  btn.addEventListener('click',moveSlide)
 
   function moveSlide(e) {
     if(e.target.className === 'page04_next') {
@@ -566,6 +576,8 @@ document.addEventListener("DOMContentLoaded",()=>{
       }
     }
   }
+
+  projectBtn.addEventListener('click',moveSlide)
   
 
 
@@ -578,6 +590,9 @@ const dev1 = $('.project01_info > #contribute > #dev > span')
 const planning2 = $('.project02_info > #contribute > #planning > span')
 const design2 = $('.project02_info > #contribute > #design > span')
 const dev2 = $('.project02_info > #contribute > #dev > span')
+const planning4 = $('.no_project04 > .project02_info > #contribute > #planning > span')
+const design4 = $('.no_project04 > .project02_info > #contribute > #design > span')
+const dev4 = $('.no_project04 > .project02_info > #contribute > #dev > span')
 /* 말풍선 제어 */
 const bubbleP1 = $('.project01_info > #bubbles > span:nth-child(1)')
 const bubbleP2 = $('.project02_info >#bubbles > span:nth-child(1)')
@@ -591,6 +606,7 @@ const firstSpan = (callback) =>{
   setInterval(() => {
     planning1.css({'height' : '100%'})
     planning2.css({'height' : '50%'})
+    planning4.css({'height': '100%'})
     callback()
     setTimeout(() => {
       bubbleP1.css({'opacity':'1','scale':'1'})
@@ -603,6 +619,7 @@ const secondSpan = (callback)=>{
   setTimeout(() => {
     design1.css({'height' : '100%'})
     design2.css({'height' : '50%'})
+    design4.css({'height' : '100%'})
     callback()
     setTimeout(() => {
       bubbleD1.css({'opacity':'1','scale':'1'})
@@ -615,6 +632,7 @@ const thirdSpan = (callback)=>{
   setTimeout(() => {
     dev1.css({'height' : '100%'})
     dev2.css({'height' : '100%'})
+    dev4.css({'height' : '100%'})
     callback()
     setTimeout(() => {
       bubbleDev1.css({'opacity':'1','scale':'1'})
@@ -717,11 +735,12 @@ $(window).scrollTop(function(){
 
 document.addEventListener("DOMContentLoaded",()=>{
 
-  const modal01Open = document.querySelector('.project01> .page_nav .modal')
-  const modal02Open = document.querySelector('.project02> .page_nav .modal')
+  const modal01Open = document.querySelector('.no_project01 > .project01> .page_nav .modal')
+  const modal02Open = document.querySelector('.no_project02 > .project02> .page_nav .modal')
   const modalOff = document.querySelectorAll('.modal_off')
   const modal01 = document.querySelector('.modal_project01')
   const modal02 = document.querySelector('.modal_project02')
+
 
   modal01Open.addEventListener('click',()=>{
     modal01.style.scale='1'
@@ -738,6 +757,24 @@ document.addEventListener("DOMContentLoaded",()=>{
     window.onkeyup = function(event){
       if(event.keyCode == 27){
         modal02.style.scale='0'
+      }
+    }
+  })
+  modal03Open.addEventListener('click',()=>{
+    modal03.style.scale='1'
+
+    window.onkeyup = function(event){
+      if(event.keyCode == 27){
+        modal03.style.scale='0'
+      }
+    }
+  })
+  modal04Open.addEventListener('click',()=>{
+    modal04.style.scale='1'
+
+    window.onkeyup = function(event){
+      if(event.keyCode == 27){
+        modal04.style.scale='0'
       }
     }
   })

@@ -259,6 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var modal_Ul = document.querySelectorAll('.modal_bg ul');
     var modalH3 = document.querySelectorAll('.modal_main h3');
     var contactLi = document.querySelectorAll('.contact li');
+    var pageNav = document.querySelectorAll('.page_nav > li');
     if (!state) {
       this.style.transform = 'translateX(76px)';
       this.style.backgroundColor = '#eee';
@@ -270,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector('#page03').style.backgroundColor = '#202b38';
       document.querySelector('#page04').style.backgroundColor = '#202b38';
       document.querySelector('#page05').style.backgroundColor = '#202b38';
-      document.querySelector('.test').style.backgroundColor = '#202b38';
+      document.querySelector('.main_contents_sonny').style.backgroundColor = '#202b38';
       document.querySelector('.my_info').style.backgroundColor = '#5b5b5b';
       document.querySelector('.my_promise').style.backgroundColor = '#5b5b5b';
       document.querySelector('#skill_root01').style.color = '#fff';
@@ -322,6 +323,16 @@ document.addEventListener("DOMContentLoaded", function () {
       for (var _i13 = 0; _i13 < contactLi.length; _i13++) {
         contactLi[_i13].style.color = 'black';
       }
+      for (var _i14 = 0; _i14 < pageNav.length; _i14++) {
+        pageNav[_i14].addEventListener('mouseenter', function () {
+          this.style.backgroundColor = '#fff';
+          this.children[0].style.color = 'black';
+        });
+        pageNav[_i14].addEventListener('mouseleave', function () {
+          this.style.backgroundColor = 'rgba(0, 113, 227, 0.8)';
+          this.children[0].style.color = '#fff';
+        });
+      }
       document.querySelector('.btn_txt').classList.add('mode');
       state = true;
     } else {
@@ -335,7 +346,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector('#page03').style.backgroundColor = '#fff';
       document.querySelector('#page04').style.backgroundColor = '#fff';
       document.querySelector('#page05').style.backgroundColor = '#fff';
-      document.querySelector('.test').style.backgroundColor = '#fff';
+      document.querySelector('.main_contents_sonny').style.backgroundColor = '#fff';
       document.querySelector('.my_info').style.backgroundColor = '#eee';
       document.querySelector('.my_promise').style.backgroundColor = '#eee';
       document.querySelector('#skill_root01').style.color = 'black';
@@ -344,49 +355,58 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector('#skill_root04').style.color = 'black';
       document.querySelector('.modal_main h3').style.color = 'black';
       document.querySelector('.notify').style.color = '#334455';
-      for (var _i14 = 0; _i14 < aChange.length; _i14++) {
-        aChange[_i14].style.color = 'black';
+      for (var _i15 = 0; _i15 < aChange.length; _i15++) {
+        aChange[_i15].style.color = 'black';
       }
-      for (var _i15 = 0; _i15 < menuA.length; _i15++) {
-        menuA[_i15].style.color = '#fff';
+      for (var _i16 = 0; _i16 < menuA.length; _i16++) {
+        menuA[_i16].style.color = '#fff';
       }
-      for (var _i16 = 0; _i16 < liChange.length; _i16++) {
-        liChange[_i16].style.backgroundColor = '#fff';
+      for (var _i17 = 0; _i17 < liChange.length; _i17++) {
+        liChange[_i17].style.backgroundColor = '#fff';
       }
-      for (var _i17 = 0; _i17 < lineChange.length; _i17++) {
-        lineChange[_i17].style.backgroundColor = 'black';
+      for (var _i18 = 0; _i18 < lineChange.length; _i18++) {
+        lineChange[_i18].style.backgroundColor = 'black';
       }
-      for (var _i18 = 0; _i18 < skillBox.length; _i18++) {
-        skillBox[_i18].style.backgroundColor = '#fff';
+      for (var _i19 = 0; _i19 < skillBox.length; _i19++) {
+        skillBox[_i19].style.backgroundColor = '#fff';
       }
-      for (var _i19 = 0; _i19 < contributeSpan.length; _i19++) {
-        contributeSpan[_i19].style.backgroundColor = '#fff';
-        contributeSpan[_i19].style.color = 'black';
+      for (var _i20 = 0; _i20 < contributeSpan.length; _i20++) {
+        contributeSpan[_i20].style.backgroundColor = '#fff';
+        contributeSpan[_i20].style.color = 'black';
       }
-      for (var _i20 = 0; _i20 < bubblesSpan.length; _i20++) {
-        bubblesSpan[_i20].style.color = 'black';
+      for (var _i21 = 0; _i21 < bubblesSpan.length; _i21++) {
+        bubblesSpan[_i21].style.color = 'black';
       }
-      for (var _i21 = 0; _i21 < projectInfo.length; _i21++) {
-        projectInfo[_i21].style.backgroundColor = '#fff';
-        projectInfo[_i21].style.boxShadow = 'rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px';
+      for (var _i22 = 0; _i22 < projectInfo.length; _i22++) {
+        projectInfo[_i22].style.backgroundColor = '#fff';
+        projectInfo[_i22].style.boxShadow = 'rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px';
       }
-      for (var _i22 = 0; _i22 < projectBtn.length; _i22++) {
-        projectBtn[_i22].style.borderColor = 'rgba(0, 113, 227, 0.8)';
+      for (var _i23 = 0; _i23 < projectBtn.length; _i23++) {
+        projectBtn[_i23].style.borderColor = 'rgba(0, 113, 227, 0.8)';
       }
-      for (var _i23 = 0; _i23 < modal_P.length; _i23++) {
-        modal_P[_i23].style.color = '#334455';
+      for (var _i24 = 0; _i24 < modal_P.length; _i24++) {
+        modal_P[_i24].style.color = '#334455';
       }
-      for (var _i24 = 0; _i24 < modal_Ul.length; _i24++) {
-        modal_Ul[_i24].style.color = 'black';
+      for (var _i25 = 0; _i25 < modal_Ul.length; _i25++) {
+        modal_Ul[_i25].style.color = 'black';
       }
-      for (var _i25 = 0; _i25 < modal_A.length; _i25++) {
-        modal_A[_i25].style.color = 'cornflowerblue';
+      for (var _i26 = 0; _i26 < modal_A.length; _i26++) {
+        modal_A[_i26].style.color = 'cornflowerblue';
       }
-      for (var _i26 = 0; _i26 < modalH3.length; _i26++) {
-        modalH3[_i26].style.color = 'black';
+      for (var _i27 = 0; _i27 < modalH3.length; _i27++) {
+        modalH3[_i27].style.color = 'black';
       }
-      for (var _i27 = 0; _i27 < contactLi.length; _i27++) {
-        contactLi[_i27].style.color = 'black';
+      for (var _i28 = 0; _i28 < contactLi.length; _i28++) {
+        contactLi[_i28].style.color = 'black';
+      }
+      for (var _i29 = 0; _i29 < pageNav.length; _i29++) {
+        pageNav[_i29].addEventListener('mouseenter', function () {
+          this.style.backgroundColor = 'rgba(0, 113, 227, 0.8)';
+        });
+        pageNav[_i29].addEventListener('mouseleave', function () {
+          this.style.backgroundColor = '#fff';
+          this.children[0].style.color = '#fff';
+        });
       }
       document.querySelector('.btn_txt').classList.remove('mode');
       state = false;
@@ -490,7 +510,7 @@ $(function () {
             }, 1000);
           }, 500);
         }, 500);
-      }, 1000);
+      }, 300);
     } else {
       $('.oner_img_line01').css({
         width: 0,
@@ -651,22 +671,22 @@ for (var i = 0; i < _skilldate.all.length; i++) {
   skillExplainLi02.appendChild(skillExplainLi02txt);
   rootAll.appendChild(skillBox);
 }
-for (var _i28 = 0; _i28 < _skilldate.language.length; _i28++) {
+for (var _i30 = 0; _i30 < _skilldate.language.length; _i30++) {
   var _skillBox = document.createElement('div');
   _skillBox.setAttribute('class', 'skill_box');
   var _skillIcon = document.createElement('div');
   _skillIcon.setAttribute('class', 'skill_icon');
   var _skillImg = document.createElement('img');
-  _skillImg.setAttribute('src', _skilldate.language[_i28].src);
-  _skillImg.setAttribute('alt', _skilldate.language[_i28].name);
+  _skillImg.setAttribute('src', _skilldate.language[_i30].src);
+  _skillImg.setAttribute('alt', _skilldate.language[_i30].name);
   var _skillName = document.createElement('p');
-  var _skillNameP = document.createTextNode(_skilldate.language[_i28].name);
+  var _skillNameP = document.createTextNode(_skilldate.language[_i30].name);
   var _skillExplain = document.createElement('ul');
   _skillExplain.setAttribute('class', 'skill_explain');
   var _skillExplainLi = document.createElement('li');
-  var _skillExplainLi01txt = document.createTextNode(_skilldate.language[_i28].info01);
+  var _skillExplainLi01txt = document.createTextNode(_skilldate.language[_i30].info01);
   var _skillExplainLi2 = document.createElement('li');
-  var _skillExplainLi02txt = document.createTextNode(_skilldate.language[_i28].info02);
+  var _skillExplainLi02txt = document.createTextNode(_skilldate.language[_i30].info02);
   _skillBox.appendChild(_skillIcon);
   _skillBox.appendChild(_skillExplain);
   _skillIcon.appendChild(_skillImg);
@@ -678,22 +698,22 @@ for (var _i28 = 0; _i28 < _skilldate.language.length; _i28++) {
   _skillExplainLi2.appendChild(_skillExplainLi02txt);
   rootLang.appendChild(_skillBox);
 }
-for (var _i29 = 0; _i29 < _skilldate.frontEnd.length; _i29++) {
+for (var _i31 = 0; _i31 < _skilldate.frontEnd.length; _i31++) {
   var _skillBox2 = document.createElement('div');
   _skillBox2.setAttribute('class', 'skill_box');
   var _skillIcon2 = document.createElement('div');
   _skillIcon2.setAttribute('class', 'skill_icon');
   var _skillImg2 = document.createElement('img');
-  _skillImg2.setAttribute('src', _skilldate.frontEnd[_i29].src);
-  _skillImg2.setAttribute('alt', _skilldate.frontEnd[_i29].name);
+  _skillImg2.setAttribute('src', _skilldate.frontEnd[_i31].src);
+  _skillImg2.setAttribute('alt', _skilldate.frontEnd[_i31].name);
   var _skillName2 = document.createElement('p');
-  var _skillNameP2 = document.createTextNode(_skilldate.frontEnd[_i29].name);
+  var _skillNameP2 = document.createTextNode(_skilldate.frontEnd[_i31].name);
   var _skillExplain2 = document.createElement('ul');
   _skillExplain2.setAttribute('class', 'skill_explain');
   var _skillExplainLi3 = document.createElement('li');
-  var _skillExplainLi01txt2 = document.createTextNode(_skilldate.frontEnd[_i29].info01);
+  var _skillExplainLi01txt2 = document.createTextNode(_skilldate.frontEnd[_i31].info01);
   var _skillExplainLi4 = document.createElement('li');
-  var _skillExplainLi02txt2 = document.createTextNode(_skilldate.frontEnd[_i29].info02);
+  var _skillExplainLi02txt2 = document.createTextNode(_skilldate.frontEnd[_i31].info02);
   _skillBox2.appendChild(_skillIcon2);
   _skillBox2.appendChild(_skillExplain2);
   _skillIcon2.appendChild(_skillImg2);
@@ -705,22 +725,22 @@ for (var _i29 = 0; _i29 < _skilldate.frontEnd.length; _i29++) {
   _skillExplainLi4.appendChild(_skillExplainLi02txt2);
   rootFront.appendChild(_skillBox2);
 }
-for (var _i30 = 0; _i30 < _skilldate.etc.length; _i30++) {
+for (var _i32 = 0; _i32 < _skilldate.etc.length; _i32++) {
   var _skillBox3 = document.createElement('div');
   _skillBox3.setAttribute('class', 'skill_box');
   var _skillIcon3 = document.createElement('div');
   _skillIcon3.setAttribute('class', 'skill_icon');
   var _skillImg3 = document.createElement('img');
-  _skillImg3.setAttribute('src', _skilldate.etc[_i30].src);
-  _skillImg3.setAttribute('alt', _skilldate.etc[_i30].name);
+  _skillImg3.setAttribute('src', _skilldate.etc[_i32].src);
+  _skillImg3.setAttribute('alt', _skilldate.etc[_i32].name);
   var _skillName3 = document.createElement('p');
-  var _skillNameP3 = document.createTextNode(_skilldate.etc[_i30].name);
+  var _skillNameP3 = document.createTextNode(_skilldate.etc[_i32].name);
   var _skillExplain3 = document.createElement('ul');
   _skillExplain3.setAttribute('class', 'skill_explain');
   var _skillExplainLi5 = document.createElement('li');
-  var _skillExplainLi01txt3 = document.createTextNode(_skilldate.etc[_i30].info01);
+  var _skillExplainLi01txt3 = document.createTextNode(_skilldate.etc[_i32].info01);
   var _skillExplainLi6 = document.createElement('li');
-  var _skillExplainLi02txt3 = document.createTextNode(_skilldate.etc[_i30].info02);
+  var _skillExplainLi02txt3 = document.createTextNode(_skilldate.etc[_i32].info02);
   _skillBox3.appendChild(_skillIcon3);
   _skillBox3.appendChild(_skillExplain3);
   _skillIcon3.appendChild(_skillImg3);
@@ -732,20 +752,18 @@ for (var _i30 = 0; _i30 < _skilldate.etc.length; _i30++) {
   _skillExplainLi6.appendChild(_skillExplainLi02txt3);
   rootEtc.appendChild(_skillBox3);
 }
-document.addEventListener("DOMContentLoaded", function () {});
 
 /* page04 event  */
 
 /* 버튼 슬라이드 */
 var slider = document.querySelector('.project_slider'); // 움직일 주체
 var projectBox = document.querySelectorAll('.project_container'); // 내용물
-var btn = document.querySelector('.project_btnbox');
+var projectBtn = document.querySelector('.project_btnbox');
 var containerWidth = projectBox[0].clientWidth + 340;
 var sliderWidth = containerWidth * projectBox.length;
 slider.style.width = "".concat(sliderWidth, "px");
 var currentIndex = 0;
 var translate = 0;
-btn.addEventListener('click', moveSlide);
 function moveSlide(e) {
   if (e.target.className === 'page04_next') {
     if (currentIndex !== projectBox.length - 1) {
@@ -766,6 +784,7 @@ function moveSlide(e) {
     }
   }
 }
+projectBtn.addEventListener('click', moveSlide);
 
 /* page04 scroll 이벤트 */
 
@@ -776,6 +795,9 @@ var dev1 = $('.project01_info > #contribute > #dev > span');
 var planning2 = $('.project02_info > #contribute > #planning > span');
 var design2 = $('.project02_info > #contribute > #design > span');
 var dev2 = $('.project02_info > #contribute > #dev > span');
+var planning4 = $('.no_project04 > .project02_info > #contribute > #planning > span');
+var design4 = $('.no_project04 > .project02_info > #contribute > #design > span');
+var dev4 = $('.no_project04 > .project02_info > #contribute > #dev > span');
 /* 말풍선 제어 */
 var bubbleP1 = $('.project01_info > #bubbles > span:nth-child(1)');
 var bubbleP2 = $('.project02_info >#bubbles > span:nth-child(1)');
@@ -792,6 +814,9 @@ var firstSpan = function firstSpan(callback) {
     });
     planning2.css({
       'height': '50%'
+    });
+    planning4.css({
+      'height': '100%'
     });
     callback();
     setTimeout(function () {
@@ -814,6 +839,9 @@ var secondSpan = function secondSpan(callback) {
     design2.css({
       'height': '50%'
     });
+    design4.css({
+      'height': '100%'
+    });
     callback();
     setTimeout(function () {
       bubbleD1.css({
@@ -833,6 +861,9 @@ var thirdSpan = function thirdSpan(callback) {
       'height': '100%'
     });
     dev2.css({
+      'height': '100%'
+    });
+    dev4.css({
       'height': '100%'
     });
     callback();
@@ -1021,8 +1052,8 @@ $(window).scrollTop(function () {
 // 모달창 제어
 
 document.addEventListener("DOMContentLoaded", function () {
-  var modal01Open = document.querySelector('.project01> .page_nav .modal');
-  var modal02Open = document.querySelector('.project02> .page_nav .modal');
+  var modal01Open = document.querySelector('.no_project01 > .project01> .page_nav .modal');
+  var modal02Open = document.querySelector('.no_project02 > .project02> .page_nav .modal');
   var modalOff = document.querySelectorAll('.modal_off');
   var modal01 = document.querySelector('.modal_project01');
   var modal02 = document.querySelector('.modal_project02');
@@ -1042,8 +1073,24 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     };
   });
-  for (var _i31 = 0; _i31 < modalOff.length; _i31++) {
-    modalOff[_i31].addEventListener('click', function () {
+  modal03Open.addEventListener('click', function () {
+    modal03.style.scale = '1';
+    window.onkeyup = function (event) {
+      if (event.keyCode == 27) {
+        modal03.style.scale = '0';
+      }
+    };
+  });
+  modal04Open.addEventListener('click', function () {
+    modal04.style.scale = '1';
+    window.onkeyup = function (event) {
+      if (event.keyCode == 27) {
+        modal04.style.scale = '0';
+      }
+    };
+  });
+  for (var _i33 = 0; _i33 < modalOff.length; _i33++) {
+    modalOff[_i33].addEventListener('click', function () {
       modal01.style.scale = '0';
       modal02.style.scale = '0';
     });
@@ -1051,8 +1098,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // project01. 나아짐 모바일 open
   var mobilebtn = document.querySelectorAll('#mobile_open');
-  for (var _i32 = 0; _i32 < mobilebtn.length; _i32++) {
-    mobilebtn[_i32].addEventListener("click", function () {
+  for (var _i34 = 0; _i34 < mobilebtn.length; _i34++) {
+    mobilebtn[_i34].addEventListener("click", function () {
       window.open('https://ssoonnyy.github.io/project01_Naagym/mobile_ver/index.html', '_blank', 'menubar=no, resizable=yes, toolbar=no, location=no, status=no, width=390,height=844,top=150,left=750');
     });
   }
@@ -1082,7 +1129,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64396" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55137" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
