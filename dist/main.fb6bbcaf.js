@@ -1073,22 +1073,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     };
   });
-  modal03Open.addEventListener('click', function () {
-    modal03.style.scale = '1';
-    window.onkeyup = function (event) {
-      if (event.keyCode == 27) {
-        modal03.style.scale = '0';
-      }
-    };
-  });
-  modal04Open.addEventListener('click', function () {
-    modal04.style.scale = '1';
-    window.onkeyup = function (event) {
-      if (event.keyCode == 27) {
-        modal04.style.scale = '0';
-      }
-    };
-  });
   for (var _i33 = 0; _i33 < modalOff.length; _i33++) {
     modalOff[_i33].addEventListener('click', function () {
       modal01.style.scale = '0';
@@ -1129,7 +1113,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55137" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53934" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -380,8 +380,6 @@ $(function(){
           }
       } 
   }  
-
-
 })
 
 
@@ -760,24 +758,7 @@ document.addEventListener("DOMContentLoaded",()=>{
       }
     }
   })
-  modal03Open.addEventListener('click',()=>{
-    modal03.style.scale='1'
 
-    window.onkeyup = function(event){
-      if(event.keyCode == 27){
-        modal03.style.scale='0'
-      }
-    }
-  })
-  modal04Open.addEventListener('click',()=>{
-    modal04.style.scale='1'
-
-    window.onkeyup = function(event){
-      if(event.keyCode == 27){
-        modal04.style.scale='0'
-      }
-    }
-  })
 
   for(let i=0; i<modalOff.length; i++){
     modalOff[i].addEventListener('click',()=>{
