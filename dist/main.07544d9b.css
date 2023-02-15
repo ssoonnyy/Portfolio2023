@@ -72,15 +72,15 @@
 
 /* 인트로 페이지 화면 제어 */
 .main_bg {
-  background-color: #E8EBF3;
+  background-color: #e8ebf3;
 }
 .main_bg .main {
-  --color: #1F242D;
+  --color: #1f242d;
   --color-invert: #ffffff;
   --clip-path: circle(15px at left);
   --clip-path-hover: circle(70px at left);
   --clip-path-clicked: circle(100vw at left);
-  --duration: .4s;
+  --duration: 0.4s;
   --timing-function: ease;
   position: relative;
   display: flex;
@@ -263,12 +263,15 @@
 }
 
 /* page03 skill */
-#chk_all, #chk_lang, #chk_front, #chk_etc {
+#chk_all,
+#chk_lang,
+#chk_front,
+#chk_etc {
   display: none;
 }
 
 #chk_all:checked ~ .skill_nav .skill_all .spot_all {
-  background-color: #BF1F1F;
+  background-color: #bf1f1f;
   animation: spotMove 1s alternate-reverse infinite;
 }
 @keyframes spotMove {
@@ -290,7 +293,7 @@
 }
 
 #chk_lang:checked ~ .skill_nav .skill_others .spot_lang {
-  background-color: #BF1F1F;
+  background-color: #bf1f1f;
   animation: spotMove 1s alternate-reverse infinite;
 }
 @keyframes spotMove {
@@ -312,7 +315,7 @@
 }
 
 #chk_front:checked ~ .skill_nav .skill_others .spot_front {
-  background-color: #BF1F1F;
+  background-color: #bf1f1f;
   animation: spotMove 1s alternate-reverse infinite;
 }
 @keyframes spotMove {
@@ -334,7 +337,7 @@
 }
 
 #chk_etc:checked ~ .skill_nav .skill_others .spot_etc {
-  background-color: #BF1F1F;
+  background-color: #bf1f1f;
   animation: spotMove 1s alternate-reverse infinite;
 }
 @keyframes spotMove {
@@ -437,9 +440,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   display: none;
-}
-.skill .skill_root ::-webkit-scrollbar {
-  width: 5px;
 }
 .skill .skill_root .skill_box {
   width: 400px;
@@ -596,13 +596,6 @@
 }
 .project .project_container .project01_box .project01 .page_nav > li > a {
   display: block;
-}
-.project .project_container .project01_box .project01 .page_nav > li:hover {
-  background-color: rgba(0, 113, 227, 0.8);
-  color: #fff;
-}
-.project .project_container .project01_box .project01 .page_nav > li:hover > a {
-  color: #fff;
 }
 .project .project_container .project01_box .project01_info {
   width: 500px;
@@ -1018,23 +1011,38 @@
 .modal_bg .modal_container .modal_main > h3 {
   text-align: center;
 }
-.modal_bg .modal_container .modal_main > .modal_intro, .modal_bg .modal_container .modal_main .modal_menu, .modal_bg .modal_container .modal_main .modal_skill, .modal_bg .modal_container .modal_main .modal_part_detail {
+.modal_bg .modal_container .modal_main > .modal_intro,
+.modal_bg .modal_container .modal_main .modal_menu,
+.modal_bg .modal_container .modal_main .modal_skill,
+.modal_bg .modal_container .modal_main .modal_part_detail {
   margin: 50px 0;
 }
-.modal_bg .modal_container .modal_main > .modal_intro > h3, .modal_bg .modal_container .modal_main .modal_menu > h3, .modal_bg .modal_container .modal_main .modal_skill > h3, .modal_bg .modal_container .modal_main .modal_part_detail > h3 {
+.modal_bg .modal_container .modal_main > .modal_intro > h3,
+.modal_bg .modal_container .modal_main .modal_menu > h3,
+.modal_bg .modal_container .modal_main .modal_skill > h3,
+.modal_bg .modal_container .modal_main .modal_part_detail > h3 {
   padding-bottom: 7px;
   border-bottom: 1px solid #ccc;
   margin-bottom: 15px;
 }
-.modal_bg .modal_container .modal_main > .modal_intro > ul > li, .modal_bg .modal_container .modal_main .modal_menu > ul > li, .modal_bg .modal_container .modal_main .modal_skill > ul > li, .modal_bg .modal_container .modal_main .modal_part_detail > ul > li {
+.modal_bg .modal_container .modal_main > .modal_intro > ul > li,
+.modal_bg .modal_container .modal_main .modal_menu > ul > li,
+.modal_bg .modal_container .modal_main .modal_skill > ul > li,
+.modal_bg .modal_container .modal_main .modal_part_detail > ul > li {
   list-style: inside;
   list-style-type: disc;
   margin-bottom: 20px;
 }
-.modal_bg .modal_container .modal_main > .modal_intro > ul > li > ul, .modal_bg .modal_container .modal_main .modal_menu > ul > li > ul, .modal_bg .modal_container .modal_main .modal_skill > ul > li > ul, .modal_bg .modal_container .modal_main .modal_part_detail > ul > li > ul {
+.modal_bg .modal_container .modal_main > .modal_intro > ul > li > ul,
+.modal_bg .modal_container .modal_main .modal_menu > ul > li > ul,
+.modal_bg .modal_container .modal_main .modal_skill > ul > li > ul,
+.modal_bg .modal_container .modal_main .modal_part_detail > ul > li > ul {
   padding-left: 32px;
 }
-.modal_bg .modal_container .modal_main > .modal_intro > ul > li > ul li, .modal_bg .modal_container .modal_main .modal_menu > ul > li > ul li, .modal_bg .modal_container .modal_main .modal_skill > ul > li > ul li, .modal_bg .modal_container .modal_main .modal_part_detail > ul > li > ul li {
+.modal_bg .modal_container .modal_main > .modal_intro > ul > li > ul li,
+.modal_bg .modal_container .modal_main .modal_menu > ul > li > ul li,
+.modal_bg .modal_container .modal_main .modal_skill > ul > li > ul li,
+.modal_bg .modal_container .modal_main .modal_part_detail > ul > li > ul li {
   margin-top: 5px;
   list-style: inside;
   list-style-type: circle;

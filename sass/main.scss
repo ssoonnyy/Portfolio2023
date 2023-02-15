@@ -1,14 +1,17 @@
 @mixin projectBox {
-  width: 100%; height: 374px;
+  width: 100%;
+  height: 374px;
   margin: 40px 0 0 0;
   position: relative;
   overflow: hidden;
 }
 @mixin pageBtn {
   width: 20%;
-  padding: 5px 10px; box-sizing: border-box;
+  padding: 5px 10px;
+  box-sizing: border-box;
   text-align: center;
-  border: 1px solid rgba(0, 113, 227, 0.8); box-sizing: border-box;
+  border: 1px solid rgba(0, 113, 227, 0.8);
+  box-sizing: border-box;
   border-radius: 50px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px, rgba(0, 0, 0, 0.23) 0px 2px 2px;
@@ -22,7 +25,7 @@
   margin-right: 10px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(black, .2);
+  box-shadow: 0 1px 3px rgba(black, 0.2);
   font-size: 13px;
   font-weight: bold;
 }
@@ -32,7 +35,8 @@
   display: block;
   opacity: 0.4;
   position: absolute;
-  left: 0; bottom: 0;
+  left: 0;
+  bottom: 0;
   width: 100%;
   height: 0%;
   transition: all 1.2s linear;
@@ -53,7 +57,7 @@
   transition: all 0.5s;
 }
 @mixin bubbleSpanAfter {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
@@ -68,52 +72,76 @@
 }
 
 .menu_bg {
-  width: 170px; height: 100vh;
+  width: 170px;
+  height: 100vh;
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   background-color: rgba($color: #0071e3d5, $alpha: 0.8);
   z-index: 999;
-  .follow_menu_position{
+  .follow_menu_position {
     position: relative;
-    .follow_menu{
+    .follow_menu {
       position: absolute;
       text-align: center;
-      >li{
+      > li {
         width: 170px;
         font-size: 20px;
         cursor: pointer;
-        >a{transition: all 0.2s; color: #fff;}
+        > a {
+          transition: all 0.2s;
+          color: #fff;
+        }
       }
     }
   }
 }
-.deco{
+.deco {
   font-weight: bold;
 }
 
 /* 1 page */
-.main{
-  .main_contents{
-    .typing{
-      li{
+.main {
+  .main_contents {
+    .typing {
+      li {
         font-size: 30px;
       }
     }
     .main_img {
-      width: 650px; height: auto;
+      width: 650px;
+      height: auto;
       position: absolute;
-      top: 50%; left: 45%;
+      top: 50%;
+      left: 45%;
       transform: translateY(-50%);
     }
-    .main_img>div {
+    .main_img > div {
       position: relative;
-      span{
-        width: 100px; height: auto;
-        position:absolute;
-        &:nth-child(1){left: -30px; top: -40px; transform: rotate(135deg);} 
-        &:nth-child(2){right: -30px; top: -40px; transform: rotate(225deg);}
-        &:nth-child(3){left: -30px; bottom: -40px; transform: rotate(-145deg);}
-        &:nth-child(4){right: -30px; bottom: -40px; transform: rotate(-45deg);}
+      span {
+        width: 100px;
+        height: auto;
+        position: absolute;
+        &:nth-child(1) {
+          left: -30px;
+          top: -40px;
+          transform: rotate(135deg);
+        }
+        &:nth-child(2) {
+          right: -30px;
+          top: -40px;
+          transform: rotate(225deg);
+        }
+        &:nth-child(3) {
+          left: -30px;
+          bottom: -40px;
+          transform: rotate(-145deg);
+        }
+        &:nth-child(4) {
+          right: -30px;
+          bottom: -40px;
+          transform: rotate(-45deg);
+        }
       }
     }
   }
@@ -121,36 +149,48 @@
 
 /* 인트로 페이지 화면 제어 */
 .main_bg {
-  background-color: #E8EBF3;
+  background-color: #e8ebf3;
   .main {
-    --color: #1F242D;
+    --color: #1f242d;
     --color-invert: #ffffff;
     --clip-path: circle(15px at left);
     --clip-path-hover: circle(70px at left);
     --clip-path-clicked: circle(100vw at left);
-    --duration: .4s;
+    --duration: 0.4s;
     --timing-function: ease;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;  height: 100vh;
+    width: 100%;
+    height: 100vh;
     .click_here {
       text-align: center;
       position: absolute;
-      top: 52%; left: 50%;
+      top: 52%;
+      left: 50%;
       transform: translateX(-50%);
-      >li{
-        &:nth-child(1){
+      > li {
+        &:nth-child(1) {
           font-size: 20px;
           animation: clickhere 1s linear 0.2s infinite;
           margin-bottom: 5px;
           @keyframes clickhere {
-            0% {transform: translateY(5px); }  
-            25% {transform: translateY(0px); }  
-            50% {transform: translateY(5px); }  
-            75% {transform: translateY(0px); }  
-            100% {transform: translateY(5px); }  
+            0% {
+              transform: translateY(5px);
+            }
+            25% {
+              transform: translateY(0px);
+            }
+            50% {
+              transform: translateY(5px);
+            }
+            75% {
+              transform: translateY(0px);
+            }
+            100% {
+              transform: translateY(5px);
+            }
           }
         }
       }
@@ -178,15 +218,16 @@
     }
     .main_open_txt {
       position: relative;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       text-transform: uppercase;
       font-weight: 600;
-      letter-spacing: .2px;
+      letter-spacing: 0.2px;
       opacity: var(--opacity, 1);
-      transition: opacity .3s var(--timing-function) .2s;
+      transition: opacity 0.3s var(--timing-function) 0.2s;
       &::before,
       &::after {
-        content:"";
+        content: "";
         position: absolute;
         bottom: 0;
         left: -1px;
@@ -197,7 +238,7 @@
         box-shadow: 26px 0 0 1px var(--color);
         right: var(--r, 100%);
         opacity: var(--opacity, 0);
-        transition: right .5s ease-in, opacity .1s linear;
+        transition: right 0.5s ease-in, opacity 0.1s linear;
       }
       &::after {
         box-shadow: 26px 0 0 1px var(--color-invert);
@@ -217,10 +258,10 @@
           position: absolute;
           left: 0;
         }
-      } 
+      }
     }
   }
-  
+
   input {
     width: 220px;
     height: 40px;
@@ -229,7 +270,7 @@
     left: 0;
     right: 0;
     border-radius: 40px;
-    outline: none; 
+    outline: none;
     z-index: 2;
     appearance: none;
     cursor: pointer;
@@ -264,7 +305,7 @@
       }
       ~ .main_open_txt {
         --opacity: 0;
-        transition: opacity .3s var(--timing-function);
+        transition: opacity 0.3s var(--timing-function);
         &::after {
           clip-path: var(--clip-path-clicked);
         }
@@ -280,29 +321,35 @@
 
 /* page03 skill */
 .about_me {
-  .txt_box{
-    width: 820px; height: 180px;
+  .txt_box {
+    width: 820px;
+    height: 180px;
     margin: 0 auto;
     margin-top: 45px;
     background-color: rgba($color: #eee, $alpha: 0.8);
-    padding: 20px 0; box-sizing: border-box;
-    >nav{
+    padding: 20px 0;
+    box-sizing: border-box;
+    > nav {
       display: flex;
       text-align: center;
-      &:nth-child(1){margin-bottom: 10px;}
-      ul{
-        width: 33.33333%; height: 50%;
-        li:nth-child(1){
+      &:nth-child(1) {
+        margin-bottom: 10px;
+      }
+      ul {
+        width: 33.33333%;
+        height: 50%;
+        li:nth-child(1) {
           padding-bottom: 8px;
           font-weight: bold;
         }
       }
     }
   }
-  .my_promise{
+  .my_promise {
     height: 250px;
-    padding-right: 20px; padding-left: 20px;
-    >strong {
+    padding-right: 20px;
+    padding-left: 20px;
+    > strong {
       display: block;
       margin: 5px 0;
     }
@@ -311,51 +358,104 @@
 
 /* page03 skill */
 @mixin skill_chk {
-  background-color:#BF1F1F;
+  background-color: #bf1f1f;
   animation: spotMove 1s alternate-reverse infinite;
   @keyframes spotMove {
-    0% {scale: 0.8;}
-    25% {scale: 1.1;}
-    50% {scale: 0.8;}
-    75% {scale: 1.1;}
-    100% {scale: 0.8;}
+    0% {
+      scale: 0.8;
+    }
+    25% {
+      scale: 1.1;
+    }
+    50% {
+      scale: 0.8;
+    }
+    75% {
+      scale: 1.1;
+    }
+    100% {
+      scale: 0.8;
+    }
   }
 }
-#chk_all,#chk_lang,#chk_front,#chk_etc {display: none;}
-#chk_all:checked ~ .skill_nav .skill_all .spot_all {@include skill_chk()}
-#chk_lang:checked ~ .skill_nav .skill_others .spot_lang {@include skill_chk()}
-#chk_front:checked ~ .skill_nav .skill_others .spot_front {@include skill_chk()}
-#chk_etc:checked ~ .skill_nav .skill_others .spot_etc {@include skill_chk()}
-#chk_all:checked ~ .skill_nav .skill_all li {font-weight: bold;}
-#chk_lang:checked ~ .skill_nav .skill_others li:nth-child(1) {font-weight: bold;}
-#chk_front:checked ~ .skill_nav .skill_others li:nth-child(2) {font-weight: bold;}
-#chk_etc:checked ~ .skill_nav .skill_others li:nth-child(3) {font-weight: bold;}
+#chk_all,
+#chk_lang,
+#chk_front,
+#chk_etc {
+  display: none;
+}
+#chk_all:checked ~ .skill_nav .skill_all .spot_all {
+  @include skill_chk();
+}
+#chk_lang:checked ~ .skill_nav .skill_others .spot_lang {
+  @include skill_chk();
+}
+#chk_front:checked ~ .skill_nav .skill_others .spot_front {
+  @include skill_chk();
+}
+#chk_etc:checked ~ .skill_nav .skill_others .spot_etc {
+  @include skill_chk();
+}
+#chk_all:checked ~ .skill_nav .skill_all li {
+  font-weight: bold;
+}
+#chk_lang:checked ~ .skill_nav .skill_others li:nth-child(1) {
+  font-weight: bold;
+}
+#chk_front:checked ~ .skill_nav .skill_others li:nth-child(2) {
+  font-weight: bold;
+}
+#chk_etc:checked ~ .skill_nav .skill_others li:nth-child(3) {
+  font-weight: bold;
+}
 
-#chk_all:checked ~ #skill_root01 {display: flex;}
-#chk_lang:checked ~ #skill_root02 {display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start;}
-#chk_front:checked ~ #skill_root03 {display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start;}
-#chk_etc:checked ~ #skill_root04 {display: flex; flex-direction: column;   flex-wrap: nowrap; justify-content: flex-start;}
+#chk_all:checked ~ #skill_root01 {
+  display: flex;
+}
+#chk_lang:checked ~ #skill_root02 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+#chk_front:checked ~ #skill_root03 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+#chk_etc:checked ~ #skill_root04 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
 
 .skill {
   position: relative;
-  .skill_nav{
+  .skill_nav {
     width: 300px;
     margin: 50px auto;
-    >ul{
+    > ul {
       text-align: center;
-      >li>label{cursor: pointer;}
-      &:nth-child(2){
+      > li > label {
+        cursor: pointer;
+      }
+      &:nth-child(2) {
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
-        >li{
+        > li {
           padding: 0 10px;
-          >label{cursor: pointer;}
+          > label {
+            cursor: pointer;
+          }
         }
       }
-      .spot{
+      .spot {
         display: inline-block;
-        width: 10px; height: 10px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         background-color: #52c41a;
         scale: 0.8;
@@ -363,61 +463,73 @@
       }
     }
   }
-  .skill_root{
-    width: 1240px; height: 664px;
+  .skill_root {
+    width: 1240px;
+    height: 664px;
     margin: 50px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     display: none;
-    ::-webkit-scrollbar{width: 5px;}
-    .skill_box{
-      width: 400px; max-height: 135px;
+    .skill_box {
+      width: 400px;
+      max-height: 135px;
       margin: 0 auto;
       margin-bottom: 50px;
       display: flex;
-      padding: 10px; box-sizing: border-box;
+      padding: 10px;
+      box-sizing: border-box;
       background-color: #fff;
-      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
       border-radius: 20px;
       transition: scale 0.2s;
-      .skill_icon{
-        width: 70px; margin-right: 10px; 
+      .skill_icon {
+        width: 70px;
+        margin-right: 10px;
         align-self: center;
         text-align: center;
-        >img {width: 50px; margin: 0 auto;}
-        >p{margin-top: 5px; font-size: 14px;}
+        > img {
+          width: 50px;
+          margin: 0 auto;
+        }
+        > p {
+          margin-top: 5px;
+          font-size: 14px;
+        }
       }
-      >.skill_explain{
+      > .skill_explain {
         max-height: 135px;
         margin-left: 10px;
         padding: 10px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        >li {
-          list-style:outside ;
+        > li {
+          list-style: outside;
           padding: 5px 0;
           font-size: 15px;
         }
       }
-      &:hover {scale: 1.1;}
+      &:hover {
+        scale: 1.1;
+      }
     }
   }
 }
 
 /* page04 project */
 
-
 .project {
   position: relative;
   overflow: hidden;
-  .project_frame{
-    width: 1240px; height: 848px;
+  .project_frame {
+    width: 1240px;
+    height: 848px;
     overflow: hidden;
     margin: 0 auto;
     position: relative;
-    >div{
+    > div {
       position: absolute;
       left: 0;
       transition: all 0.4s;
@@ -428,7 +540,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    button{
+    button {
       width: 33px;
       height: 33px;
       border: 2px solid rgba(0, 113, 227, 0.8);
@@ -437,35 +549,40 @@
       background-color: rgba($color: #000000, $alpha: 0);
       display: none;
       cursor: pointer;
-      &.page04_next{
-        position: fixed; right: 10%;
+      &.page04_next {
+        position: fixed;
+        right: 10%;
         transform: rotate(315deg);
       }
-      &.page04_prev{
-        position: fixed; left: 5%;
+      &.page04_prev {
+        position: fixed;
+        left: 5%;
         transform: rotate(135deg);
       }
     }
   }
   .project_container {
-    width: 1240px; 
+    width: 1240px;
     float: left;
-    .project01_box{
+    .project01_box {
       @include projectBox();
-      .project01{
-        width: 610px; height: 374px;
+      .project01 {
+        width: 610px;
+        height: 374px;
         position: absolute;
-        left: -610px; top: 0;
+        left: -610px;
+        top: 0;
         transition: left 0.8s;
-        .project01_imgbox{
+        .project01_imgbox {
           display: flex;
           justify-content: space-evenly;
-          img{
-            &:nth-child(1){
-              width: 380px; 
+          img {
+            &:nth-child(1) {
+              width: 380px;
             }
-            &:nth-child(2){
-              width: 68px; height: 136px;
+            &:nth-child(2) {
+              width: 68px;
+              height: 136px;
               align-self: flex-end;
               cursor: pointer;
             }
@@ -475,44 +592,57 @@
           display: flex;
           justify-content: space-evenly;
           margin-top: 20px;
-          >li {
+          > li {
             @include pageBtn();
-            &:nth-child(1):active{box-shadow: none; scale: 0.9;}
-            &:nth-child(2):active{box-shadow: none; scale: 0.9;}
-            &:nth-child(3):active{box-shadow: none; scale: 0.9;}
-            &:nth-child(4):active{box-shadow: none; scale: 0.9;}
-            >a{display: block;}
-            &:hover {
-              background-color:rgba(0, 113, 227, 0.8);
-              color: #fff;
-              &>a{color: #fff;}
+            &:nth-child(1):active {
+              box-shadow: none;
+              scale: 0.9;
+            }
+            &:nth-child(2):active {
+              box-shadow: none;
+              scale: 0.9;
+            }
+            &:nth-child(3):active {
+              box-shadow: none;
+              scale: 0.9;
+            }
+            &:nth-child(4):active {
+              box-shadow: none;
+              scale: 0.9;
+            }
+            > a {
+              display: block;
             }
           }
-    
         }
       }
-      .project01_info{
-        width: 500px; 
-        padding: 30px 40px 30px 40px; box-sizing: border-box;
+      .project01_info {
+        width: 500px;
+        padding: 30px 40px 30px 40px;
+        box-sizing: border-box;
         margin-bottom: 10px;
         position: absolute;
-        right: -540px; bottom: 0;
+        right: -540px;
+        bottom: 0;
         transition: right 0.8s;
-        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-        >#contribute {
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+          rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+        > #contribute {
           margin-top: 10px;
-          >span {
+          > span {
             @include contributeSpan01();
-            >span {
-              @include contributeSpan02($bgc:rgba($color: #BF1F1F, $alpha: 0.5));
+            > span {
+              @include contributeSpan02(
+                $bgc: rgba($color: #bf1f1f, $alpha: 0.5)
+              );
             }
           }
         }
         .bubbles {
           padding-left: 20px;
-          >span {
-           @include bubbleSpan();
-            &::after{
+          > span {
+            @include bubbleSpan();
+            &::after {
               @include bubbleSpanAfter();
             }
           }
@@ -520,70 +650,98 @@
         .project_concept {
           margin: 30px 0;
         }
-        .stack{
-          .stack_icon{
+        .stack {
+          .stack_icon {
             display: flex;
             margin-top: 10px;
-            >span{
-              width: 32px; height: 32px;
+            > span {
+              width: 32px;
+              height: 32px;
               margin-right: 10px;
             }
           }
         }
       }
     }
-    .project02_box{
+    .project02_box {
       @include projectBox();
-      .project02{
-        width: 610px; height: 374px;
+      .project02 {
+        width: 610px;
+        height: 374px;
         position: absolute;
-        left: -610px; top: 0;
+        left: -610px;
+        top: 0;
         transition: left 0.8s;
-        .project02_imgbox{
-          >img {width: auto; height:316px; margin: 0 auto;}
+        .project02_imgbox {
+          > img {
+            width: auto;
+            height: 316px;
+            margin: 0 auto;
+          }
         }
         .page_nav {
           display: flex;
           justify-content: space-evenly;
           margin-top: 20px;
-          >li {
+          > li {
             @include pageBtn();
-            &:nth-child(1):active{box-shadow: none; scale: 0.9;}
-            &:nth-child(2):active{box-shadow: none; scale: 0.9;}
-            &:nth-child(3):active{box-shadow: none; scale: 0.9;}
-            &:nth-child(4):active{box-shadow: none; scale: 0.9;}
-            >a{display: block;}
+            &:nth-child(1):active {
+              box-shadow: none;
+              scale: 0.9;
+            }
+            &:nth-child(2):active {
+              box-shadow: none;
+              scale: 0.9;
+            }
+            &:nth-child(3):active {
+              box-shadow: none;
+              scale: 0.9;
+            }
+            &:nth-child(4):active {
+              box-shadow: none;
+              scale: 0.9;
+            }
+            > a {
+              display: block;
+            }
             &:hover {
-              background-color:rgba(0, 113, 227, 0.8);
+              background-color: rgba(0, 113, 227, 0.8);
               color: #fff;
-              & a{color: #fff;}
+              & a {
+                color: #fff;
+              }
             }
           }
         }
       }
-      .project02_info{
-        width: 500px; 
-        padding: 30px 40px 30px 40px; box-sizing: border-box;
+      .project02_info {
+        width: 500px;
+        padding: 30px 40px 30px 40px;
+        box-sizing: border-box;
         margin-bottom: 10px;
         position: absolute;
-        right: -540px; bottom: 0;
+        right: -540px;
+        bottom: 0;
         transition: right 0.8s;
-        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-        >#contribute {
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+          rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+        > #contribute {
           margin-top: 10px;
-          >span {
+          > span {
             @include contributeSpan01();
-            >span{
-              @include contributeSpan02($bgc:rgba($color: #ff9500, $alpha: 0.5));
+            > span {
+              @include contributeSpan02(
+                $bgc: rgba($color: #ff9500, $alpha: 0.5)
+              );
             }
           }
         }
- 
+
         .bubbles {
           padding-left: 20px;
-          >span {
-           @include bubbleSpan();
-            &::after{
+          > span {
+            @include bubbleSpan();
+            &::after {
               @include bubbleSpanAfter();
             }
           }
@@ -591,173 +749,209 @@
         .project_concept {
           margin: 30px 0;
         }
-        .stack{
-          .stack_icon{
+        .stack {
+          .stack_icon {
             display: flex;
             margin-top: 10px;
-            >span{
-              width: 32px; height: 32px;
+            > span {
+              width: 32px;
+              height: 32px;
               margin-right: 10px;
             }
           }
         }
       }
     }
-    .no_project03{
-      .project01_info{
-        >#contribute {
+    .no_project03 {
+      .project01_info {
+        > #contribute {
           margin-top: 10px;
-          >span {
+          > span {
             @include contributeSpan01();
-            >span{
-              @include contributeSpan02($bgc:rgba(0, 113, 227, 0.8));
+            > span {
+              @include contributeSpan02($bgc: rgba(0, 113, 227, 0.8));
             }
           }
         }
       }
     }
-    .no_project04{
-      .project02_info{
-        >#contribute {
+    .no_project04 {
+      .project02_info {
+        > #contribute {
           margin-top: 10px;
-          >span {
+          > span {
             @include contributeSpan01();
-            >span{
-              @include contributeSpan02($bgc:rgba($color: #BF1F1F, $alpha: 0.5));
+            > span {
+              @include contributeSpan02(
+                $bgc: rgba($color: #bf1f1f, $alpha: 0.5)
+              );
             }
           }
         }
       }
     }
   }
-  .project_silde02{ margin: 0 340px;} // 페이지 추가될 때마다 추가해주기
+  .project_silde02 {
+    margin: 0 340px;
+  } // 페이지 추가될 때마다 추가해주기
 }
-
 
 /* page05 contact */
 
 .contact {
-  .contact01{
-    width: 500px; height: 200px;
+  .contact01 {
+    width: 500px;
+    height: 200px;
     margin: 100px auto;
     text-align: center;
     line-height: 100px;
-    >p{
+    > p {
       font-size: 22px;
     }
-  } 
+  }
   .touch_me {
     width: 1240px;
     display: flex;
     justify-content: space-evenly;
     margin: 50px auto;
     text-align: center;
-    ul{
+    ul {
       padding: 10px 25px;
       background-color: #f4f7f8;
       border-radius: 15px;
-      li{
-        &:nth-child(1){
+      li {
+        &:nth-child(1) {
           font-size: 80px;
-          width: 110px; height: 106px;
+          width: 110px;
+          height: 106px;
           display: flex;
           justify-content: center;
           margin-bottom: 10px;
           position: relative;
           scale: 1;
-          transition: scale .3s;
-          &:hover{
+          transition: scale 0.3s;
+          &:hover {
             animation-name: imgAni;
             animation-duration: 700ms;
             animation-iteration-count: infinite;
             scale: 1;
           }
           @keyframes imgAni {
-            0% {scale: 1;}
-            25% {scale: 0.95;}
-            50% {scale: 1;}
-            75% {scale: 0.95;}
-            100% {scale: 1;}
+            0% {
+              scale: 1;
+            }
+            25% {
+              scale: 0.95;
+            }
+            50% {
+              scale: 1;
+            }
+            75% {
+              scale: 0.95;
+            }
+            100% {
+              scale: 1;
+            }
           }
         }
       }
     }
   }
-  >p {
+  > p {
     text-align: center;
-    &.notify{
+    &.notify {
       font-size: 12px;
       color: #334455;
       position: absolute;
-      bottom: 10px; left: 50%;
+      bottom: 10px;
+      left: 50%;
       transform: translateX(-50%);
     }
   }
-  
 }
 
-
-
 /* 모달창 */
-@mixin modal_bg {}
-@mixin modal_ {}
-.modal_bg{
-  width: 100%; height: 100%;
+@mixin modal_bg {
+}
+@mixin modal_ {
+}
+.modal_bg {
+  width: 100%;
+  height: 100%;
   background: rgba($color: #999, $alpha: 0.8);
   box-shadow: 0 15px 30px 0 rgba(#000, 0.25);
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   scale: 0;
   overflow: hidden;
   transition: scale 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   .modal_container {
-    max-width: 1240px; height: 833px;
+    max-width: 1240px;
+    height: 833px;
     margin: 40px auto;
     border-radius: 20px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    .modal_header{
-      padding: 16px 32px; box-sizing: border-box;
+    .modal_header {
+      padding: 16px 32px;
+      box-sizing: border-box;
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-radius: 20px 20px 0 0;
-      .modal_title{
+      .modal_title {
         font-size: 30px;
         font-weight: bold;
         color: #fff;
       }
       .modal_off {
         display: inline-block;
-        padding: 2px 7px; box-sizing: border-box;
-        border: none; background-color: #fff;
+        padding: 2px 7px;
+        box-sizing: border-box;
+        border: none;
+        background-color: #fff;
         border-radius: 5px;
         transition: all 0.3s;
         cursor: pointer;
-        &:after {display: inline-block; content: "\00d7"; font-size:15pt;}
-        &:hover {background-color: #eee; border-radius: 50%;}
+        &:after {
+          display: inline-block;
+          content: "\00d7";
+          font-size: 15pt;
+        }
+        &:hover {
+          background-color: #eee;
+          border-radius: 50%;
+        }
       }
     }
     .modal_main {
       padding: 24px 150px 51px;
       overflow-y: auto;
-      >h3{text-align: center; }
-      >.modal_intro,.modal_menu,.modal_skill,.modal_part_detail{
+      > h3 {
+        text-align: center;
+      }
+      > .modal_intro,
+      .modal_menu,
+      .modal_skill,
+      .modal_part_detail {
         margin: 50px 0;
-        >h3{
+        > h3 {
           padding-bottom: 7px;
           border-bottom: 1px solid #ccc;
           margin-bottom: 15px;
         }
-        >ul{
-          >li{
+        > ul {
+          > li {
             list-style: inside;
             list-style-type: disc;
             margin-bottom: 20px;
-            >ul{
+            > ul {
               padding-left: 32px;
-              li{
+              li {
                 margin-top: 5px;
                 list-style: inside;
                 list-style-type: circle;
@@ -766,107 +960,119 @@
           }
         }
       }
-      .modal_sitemap{
-        >ul{
+      .modal_sitemap {
+        > ul {
           display: flex;
           justify-content: space-around;
           margin: 40px 0;
-          li>a{
+          li > a {
             color: cornflowerblue;
-            &:hover{
+            &:hover {
               text-decoration: underline;
               font-weight: bold;
-              color:darkblue;
+              color: darkblue;
             }
           }
         }
       }
-      .modal_part{
+      .modal_part {
         display: flex;
         justify-content: center;
         margin: 20px 0;
         text-align: center;
-        ul{
+        ul {
           padding: 5px 15px;
           margin: 0 15px;
           border-radius: 10px;
           background-color: #f4f7f8;
           color: #334455;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-          li{
-            &:nth-child(1){font-weight: bold;}
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+            rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          li {
+            &:nth-child(1) {
+              font-weight: bold;
+            }
           }
         }
       }
-      .modal_intro{
+      .modal_intro {
         margin: 40px 0;
       }
       .modal_menu {
         margin: 30px 0;
-        >p{
+        > p {
           margin: 5px 0;
         }
       }
       .modal_explain {
         text-align: center;
-        video{ width: 800px; margin: 0 auto;}
-        img { width: 400px; margin: 0 auto;}
-        ul{
+        video {
+          width: 800px;
+          margin: 0 auto;
+        }
+        img {
+          width: 400px;
+          margin: 0 auto;
+        }
+        ul {
           margin: 50px 0 20px 0;
           font-size: 22px;
           font-weight: bold;
-          a{
-            font-size: 14px; 
+          a {
+            font-size: 14px;
             font-weight: normal;
-           
+
             color: cornflowerblue;
-            &:hover{
+            &:hover {
               text-decoration: underline;
               font-weight: bold;
-              color:darkblue;
+              color: darkblue;
             }
           }
-          li{
-            margin: 40px 0; 
-            &.modal_explain_txt{
+          li {
+            margin: 40px 0;
+            &.modal_explain_txt {
               background-color: #f4f7f8;
               border-radius: 15px;
               color: black;
               margin-top: 10px;
-              padding: 20px 30px; box-sizing: border-box;
-              font-size: 18px; 
+              padding: 20px 30px;
+              box-sizing: border-box;
+              font-size: 18px;
               font-weight: normal;
               text-align: start;
             }
           }
         }
-        hr{margin: 100px 0;}
-        .project01_mobile_explain{
-          ul{
+        hr {
+          margin: 100px 0;
+        }
+        .project01_mobile_explain {
+          ul {
             display: flex;
             justify-content: center;
             align-items: center;
-            li {margin: 0 10px;}
+            li {
+              margin: 0 10px;
+            }
           }
         }
-        .flexbox{
+        .flexbox {
           display: flex;
           align-items: center;
-          li{
+          li {
             width: 50%;
-            &:nth-child(1){
-              >video {
+            &:nth-child(1) {
+              > video {
                 width: 100%;
               }
             }
           }
         }
       }
-
     }
-    footer{
+    footer {
       padding: 10px 0;
     }
   }
 }
-
